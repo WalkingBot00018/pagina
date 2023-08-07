@@ -2,75 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="img/icono.avif">
-    <title>MUSIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forcss/login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>INICIO DE SECION</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (!username || !password) {
+            event.preventDefault();
+            swal("Error", "Por favor, complete ambos campos", "error");
+        } else {
+            swal("Éxito", "Inicio de sesión exitoso", "success");
+        }
+    });
+});
+
+        
+    </script>
+   
 </head>
 <body>
-    <header>
-        <h1>BIENVENIDO</h1>
-        <img class="logo1" src="img/principal.avif" alt="logo1">
-    </header>
-    
-    <div class="menu">
+    <div class="menu1">
+       
         <ul>
-            <!-- <li><a href="index.html">Inicio</a></li> -->
-            <li><a href="login.html" > INCIO SECION</a></li>
+            <li><a href="index.html"> INCIO </a></li>
+            <li><a href="login.html" class="activo"> INCIO SECION</a></li>
             <li><a href="boleta.html" >ENTRADAS</a></li>
             <!-- <li><a href="registro.html">Form Registro</a></li> -->
             <li><a href="buscar.html"> BUSCAR ARTISTA</a></li>
             <!-- <li><a href="validar.html">Form Vaidacion</a></li> -->
         </ul>
     </div>
-    <div class="contenido">
-
-        <h2 class="titulo2">intro</h2>
-        <p class="t">Explora el emocionante mundo de la música electrónica y sus vibrantes ritmos.</p>
-        <img class="i" src="img/inicioavif.avif" alt="">
-        <p></p>
-         
- 
-     </div>
-     <section id="artistas">
-        <h2 class="art">Artistas Destacados</h2>
-        <div class="artista">
-            <img src="img/David-Guetta.jpg" alt="Artista 1">
-            <h3>David Guetta</h3>
-        </div>
-        <div class="artista">
-            <img src="img/martingarrix.webp" alt="Artista 2">
-            <h3>Martin Garrix</h3>
-        </div>
-        <div class="artista">
-            <img src="img/marshmello.jpg" alt="Artista 2">
-            <h3>Marshmello</h3>
-        </div>
-    </section>
-    <section id="generos">
-        <h2 class="pro">Géneros</h2>
-        <ul>
-            <li><a href="House.html">House</a></li>
-            <li><a href="Tecnho.html">Techno</a></li>
-            <li><a href="Trance.html">Trance</a></li>
-            <li><a href="Tecnho.html">Dubstep</a></li>
-        </ul>
-    </section>
-    <section id="eventos">
-        <h2 class="pro">Próximos Eventos</h2>
-        <div class="evento">
-            <h3>Tomorrowland</h3>
-            <p>Fecha: 21/07/2023</p>
-            <p>Lugar: Area recreativa provincial De Schorre, Boom, Antwerp, Bélgica   </p>
-        </div>
-        <div class="evento">
-            <h3>Evento 2</h3>
-            <p>Fecha: XX/XX/XXXX</p>
-            <p>Lugar: Ciudad</p>
-        </div>
-    </section>
+    <div class="login-contenido">
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="post"> 
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" value="enviar">Iniciar Sesión</button>
+        </form>
+    </div>
 </body>
 <footer>
     <div class="social-icons">
