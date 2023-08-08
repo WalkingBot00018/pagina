@@ -21,7 +21,7 @@
 
     <div class="contenido">
         <h1>Adquirir Entrada</h1>
-        <form class="boleta-form">
+        <form action="#" class="boleta-form" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -40,6 +40,16 @@
             <button type="submit">Adquirir Entrada</button>
         </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js"></script>
+    <script>
+        // Agregar un event listener al formulario para el evento de envío (submit)
+        document.getElementById('boleta-form').addEventListener('submit', function(evento) {
+            evento.preventDefault(); // Evitar que el formulario se envíe si hay errores
+            // Si todas las validaciones son correctas, puedes enviar el formulario aquí.
+            // Por ahora, mostraremos una alerta para indicar una validación exitosa.
+            alert("su boleta quedo asignada con exito :D");
+        });
+    </script>
 </body>
 <footer>
     <div class="social-icons">

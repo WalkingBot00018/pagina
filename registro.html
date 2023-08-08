@@ -3,33 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forcss/login.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>INICIO DE SECION</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-
-    form.addEventListener("submit", function (event) {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-
-        if (!username || !password) {
-            event.preventDefault();
-            swal("Error", "Por favor, complete ambos campos", "error");
-        } else {
-            swal("Éxito", "Inicio de sesión exitoso", "success");
-        }
-    });
-});
-
-        
-    </script>
-   
+    <title>Document</title>
+    <link rel="stylesheet" href="forcss/registro.css">
 </head>
 <body>
     <div class="menu1">
-       
+       <nav>
         <ul>
             <li><a href="index.html"> INCIO </a></li>
             <li><a href="login.html" class="activo"> INCIO SECION</a></li>
@@ -38,21 +17,61 @@
             <li><a href="buscar.html"> BUSCAR ARTISTA</a></li>
             <!-- <li><a href="validar.html">Form Vaidacion</a></li> -->
         </ul>
+    </nav>
     </div>
-    <div class="login-contenido">
-        <h2>Iniciar Sesión</h2>
-        <form action="#" method="post"> 
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
+    <div class="contenidoreg">
+      <form action="" class="formu" autocomplete="off">
+        <p class="registra-titulo">REGISTRATE</p>
+        <div class="form-registro minombre" >
+            <input type="text" id="minombre">
+            <label for="minombre">Nombre</label>
+            <p class="mensaje-error"> </p>
             
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
 
-            <a href="registro.html">No tienes cuenta registrate aqui</a>
+        </div>
+        <div class="form-registro miapellido">
+            <input type="text" id="miapellido">
+            <label for="miapellido">Apellido</label>
+            <p class="mensaje-error"> </p>
             
-            <button type="submit" value="enviar">Iniciar Sesión</button>
-        </form>
+        </div>
+        <div class="form-registro email">
+            <input type="email" id="email">
+            <label for="email">Correo electronico</label>
+            <p class="mensaje-error"> </p>
+        </div>
+        <div class="form-registro mobile">
+            <input type="text" id="mobile">
+            <label for="mobile">Celular</label>
+            <p class="mensaje-error"> </p>
+        </div>
+        <div class="form-registro password">
+            <input type="password" id="password">
+            <label for="password">Contraseña</label>
+            <p class="mensaje-error"> </p>
+        </div>
+        <div class="form-registro repetirpassword">
+            <input type="password" id="repetirpassword">
+            <label for="repetirpassword">Repetir contraseña</label>
+            <p class="mensaje-error"> </p>
+        </div>
+
+        <div class="terminos terminoscondiciones">
+            <input type="checkbox" id="terminoscondiciones">
+            <label for="terminoscondiciones">acepta las condiciones</label>
+            <a href="#">Terminos y condiciones</a>
+
+        </div>
+
+        <div class="boton" >
+            <input type="submit" value="REGISTRAR">
+        </div>
+        <p class="mensaje-correcto"></p>
+
+      </form>
+
     </div>
+    <script src="formjs/reg.js"></script>
 </body>
 <footer>
     <div class="social-icons">

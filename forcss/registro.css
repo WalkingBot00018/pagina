@@ -1,0 +1,180 @@
+/* estilos de formulario registro*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(115, 118, 117);
+
+}
+/* estilos de menu*/
+.menu1{
+    width: 100%;
+    height: 60px;
+    background: rgb(56, 55, 55);
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    position: relative;
+    
+
+
+}
+
+ul li{ 
+    display: inline-block;
+    margin-left: 30px;
+    
+    
+    
+}
+
+ul a{
+    text-decoration: none;
+    
+    color: #0c0c0c;
+    background-color: rgb(142, 142, 240);
+    padding: 10px 16px;
+    border-radius: 5px;
+    opacity: 0.6;
+    font-size: 26px;
+    display: inline-block;
+    outline: none;
+    margin: 4px;
+    margin-left: 20px;
+    transition: 0.2s ease;
+    font-family: 'Mulish', sans-serif;
+}
+ul li a.activo{
+background-color: rgb(36, 36, 240);
+transform: none;
+}
+
+ul li a:hover{
+opacity: 1;
+}  
+.contenidoreg{
+    /* border: 1px solid black;  */
+    
+    max-width: 90%; 
+
+   margin: auto;
+    margin-top: 10px; 
+ }
+ .formu{
+   /* border: 1px solid black; */
+   border-radius: 30px;
+   border-top: 2px solid black;
+   max-width: 400px;
+   padding: 30px 50px;
+   margin: auto;
+   background-color: rgb(7, 162, 173);
+ }
+ .registra-titulo{
+   font-family: sans-serif;
+   font-weight: bold;
+   font-size: 30px;
+   text-align: center;
+   color: #050505;
+   margin: 0;margin-bottom: 20px;
+ 
+ }
+ .form-registro{
+   margin-bottom: 30px;
+   font-family: sans-serif;
+ }
+ .form-registro label{
+   display:block;
+   margin-top: 10px;
+   font-size: 15px;
+   color: #333;
+ }
+ 
+ .form-registro input{
+   width: 100%;
+   border: none;
+   outline: none;
+   background: none;
+   border-bottom: 1px solid black;
+ }
+ .form-registro input:focus + label{
+   font-weight: bold;
+   
+ }
+ .terminos {
+   margin-top: 20px;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .terminos a {
+   margin-left: 10px;
+   text-decoration: none;
+   color: #efefef; /* Puedes cambiar el color a tu gusto */
+ }
+ 
+ .terminos a:hover {
+   text-decoration: underline;
+   
+ }
+ 
+ .terminos input[type="checkbox"] {
+   margin-right: 10px;
+ }
+ .boton input{
+   background: #050505;
+   color: #ccc;
+   padding: 10px 50px;
+   font-size: 20px;
+   font-weight: bold;
+   display: block;
+   margin: auto;
+   margin-top: 40px;
+   border: none;
+ }
+ .boton input:hover{
+   background: gray;
+   transition: 0.5s;
+ }
+ /* Estilos para campos válidos e inválidos */
+ /* .form-registro input:invalid {
+   border-color: rgb(245, 5, 5);
+ }
+ 
+ .form-registro input:valid {
+   border-color: rgb(0, 255, 34);
+ } */
+ 
+ /* Pseudo-elemento para el icono */
+ /* .form-registro input:valid + label::after {
+   content: '\2714'; /* Icono de checkmark 
+   color: green;
+   margin-left: 5px;
+ }
+ 
+ .form-registro input:invalid  {
+   content: '\2718'; /* Icono de cross 
+   color: red;
+   margin-left: 5px;
+ } */
+ /*estilos footer*/
+p{
+    font-size: 15px;
+    top: 3px;
+    
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background: #0c0c0c;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+     margin-top: 25%; 
+}
