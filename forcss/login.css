@@ -1,52 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200&family=Mulish:ital,wght@0,300;0,400;1,200&family=Oswald:wght@200;600;700&family=Roboto:wght@100&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200&family=Mulish:ital,wght@0,300;0,400;1,200&family=Oswald:wght@200;600;700&family=Roboto:wght@100&family=Victor+Mono:wght@100&display=swap');
-
-*{
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('img/fondologing.avif');
-    /* background-color: #f2f2f2; */
+    background-image: url('img/fondologing.avif'); /* Cambia 'ruta-de-tu-imagen.jpg' por la ruta correcta */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-/* estilos de menu*/
-.menu1{
+
+
+/* Menú */
+.menu {
     width: 100%;
     height: 60px;
     background: rgb(56, 55, 55);
     list-style: none;
     text-align: center;
-    padding: 20px;
+    padding: 70px;
     margin-bottom: 50%;
     border-radius: 5px;
     position: relative;
-    
-
-
 }
 
-ul li{ 
+.menu li {
     display: inline-block;
     margin-left: 30px;
-    
-    
-    
 }
 
-ul a{
+.menu a {
     text-decoration: none;
-    
     color: #0c0c0c;
     background-color: rgb(142, 142, 240);
     padding: 10px 16px;
@@ -60,64 +44,127 @@ ul a{
     transition: 0.2s ease;
     font-family: 'Mulish', sans-serif;
 }
-ul li a.activo{
-background-color: rgb(36, 36, 240);
-transform: none;
+
+.menu li a.activo {
+    background-color: rgb(36, 36, 240);
+    transform: none;
 }
 
-ul li a:hover{
-opacity: 1;
-}  
-
-.login-contenido {
-    height: 50%;
-    position: absolute;
-    background-color: #565454;
-    opacity: 20px;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.menu li a:hover {
+    opacity: 1;
+}
+h2{
     text-align: center;
-}
-label{
-    margin-top: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    font-weight: bold;
+    color: #0c0c0c;
 }
 
-input {
-    margin-top: 13px;
-    padding: 10px;
-    border: 1px solid #080808;
+/* Formulario de inicio de sesión */
+.form-login {
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    background-color: rgb(59, 123, 241);
+    border-radius: 30px;
+    margin-top: -39%;
+    border-bottom: 1px solid black;
+}
+
+
+
+.form-login input[type=text]{
+    width: 275px;
+}
+
+
+.form-login input[type=password] {
+    color: #ffffff;
+    box-sizing: border-box;
+    width: 275px;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
     border-radius: 3px;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
+.campo:valid + .icon {
+    color: green;
+}
+
+.campo:invalid + .icon {
+    color: rgb(227, 14, 14);
+}
+
+.form-login input[type=submit] {
+    display: block;
+    border-radius: 2px;
+    background-color: rgb(81, 81, 156);
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin: 40px auto 0;
+    font-size: 20px;
     cursor: pointer;
 }
-a{
-    text-decoration: none;
-    font-size: 11px;
-    color: bisque;
+
+/* Estilos para campos válidos e inválidos */
+.form-login input:invalid {
+    border-color: rgb(245, 5, 5);
 }
 
-/*estilos footer*/
-p{
-    font-size: 15px;
-    top: 3px;
-    
+.form-login input:valid {
+    border-color: rgb(4, 0, 255);
 }
-footer{
+
+/* Diseño responsivo */
+
+/* Agrega estilos a los inputs */
+.form-login input[type="text"],
+.form-login input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #ffffff; /* Línea debajo del input */
+    outline: none;
+    background: none;
+    padding: 8px 15px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.form-login input:focus {
+    border-color: rgb(4, 0, 255);
+}
+
+
+.form-login input:valid {
+    border-color: rgb(4, 0, 255); 
+}
+
+/* Estilos para el label */
+.form-login label {
+    display: block;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+
+.form-login input[type="submit"] {
+    display: block;
+    background-color: rgb(51, 22, 237);
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+
+/* Pie de página */
+footer {
     width: 100%;
     height: 100px;
     background: #0c0c0c;
@@ -126,5 +173,31 @@ footer{
     font-size: 30px;
     font-family: sans-serif;
     position: absolute;
-     margin-top: 65%; 
+    margin-top: 8%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ba04f1;
+}
+.regi{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
 }
