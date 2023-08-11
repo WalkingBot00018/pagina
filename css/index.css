@@ -100,6 +100,7 @@ opacity: 1;
     position: absolute;
     font-weight: bold ;
     margin-top: 29%;
+    color: #0d0d0d ;
 }
     
 /* Estilos de secciones */
@@ -166,7 +167,18 @@ section {
 }
 
 
-/*estilos pantalla*/
+/*estilos carrusel*/
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 40px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
 
 
 /*estilos footer*/
@@ -184,3 +196,4 @@ footer{
     font-size: 30px;
     font-family: sans-serif;
 }
+
